@@ -5,29 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Match Color Game</title>
+  <title>Match Image Game</title>
   <link rel="stylesheet" href="style.css">
-  <script src="lib/jquery.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 
 <body>
   <div class="game">
-    <div class="start-screen">
-      <div class="play"></div>
-    </div>
 
-    <div class="game-screen">
-      <div class="game-menu">
-        <div class="game-level">Level: <span id="level"></span></div>
-        <div class="game-life">Life: <span id="life"></span></div>
-        <div class="game-score">Score: <span id="score"></span></div>
-        <div class="game-reset">Reset Game</div>
-      </div>
-      <div class="game-area">
-      </div>
+	<div id="game-menu">
+		<span id="game-stats"></span>
+		<button id="game-reset">Reset Game</button>
+	</div>
+	<div class="game-area" id="game-area">
+		<div class="card" data-code="angular-js"><img class="front" src="images/angular-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="angular-js"><img class="front" src="images/angular-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="c-sharp"><img class="front" src="images/c-sharp.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="c-sharp"><img class="front" src="images/c-sharp.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="code"><img class="front" src="images/code.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="code"><img class="front" src="images/code.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="docker"><img class="front" src="images/docker.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="docker"><img class="front" src="images/docker.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="kubernetes"><img class="front" src="images/kubernetes.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="kubernetes"><img class="front" src="images/kubernetes.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="node-js"><img class="front" src="images/node-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="node-js"><img class="front" src="images/node-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="vs-code"><img class="front" src="images/vs-code.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="vs-code"><img class="front" src="images/vs-code.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="vue-js"><img class="front" src="images/vue-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+		<div class="card" data-code="vue-js"><img class="front" src="images/vue-js.png" alt="" /><img class="back" src="images/back.png" alt="" /></div>
+	</div>
 
-    </div>
   </div>
 </body>
 

@@ -1,167 +1,83 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
-    height: 100vh;
-    background-color: silver;
-    display: flex;
+  height: 100vh;
+  background-color: white;
+  display: flex;
 }
 
 .game {
-    width: 600px;
-    height: 600px;
-    margin: auto;
+  width: 600px;
+  height: 600px;
+  margin: auto;
 }
 
-.game-menu {
-    background-color: green;
-    color: white;
-    border-radius: 10px;
+#game-menu {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 
-.game-level, .game-life, .game-score, .game-reset {
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
-    padding: 5px 10px;
-}
-
-.game-reset {
-    cursor: pointer;
-    float: right;
-}
-
-.game-reset:after {
-    clear: right;
-}
-
-.game-reset:hover {
-    color: rgb(204, 204, 204);
+#game-reset {
+  cursor: pointer;
+  float: right;
 }
 
 .game-area {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.game-screen {
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-
-.start-screen {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.play {
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-left: 100px solid lime;
-    border-bottom: 50px solid transparent;
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 
 .card {
-    margin: 0 auto;
-    width: 23%;
-    height: 23%;
-    margin: 5px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s;
-    cursor: pointer;
-    text-align: center;
+  margin: 0 auto;
+  height: 8.5rem;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card img {
+  height: 100%;
 }
 
 .card:active {
-    transform: scale(0.95);
-    transition: transform 0.2s ease-in-out;
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;
 }
 
 .card.flip {
-    transform: rotateY(180deg);
-    cursor: pointer;
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .card.flip .front {
-    display: block;
+  display: block;
 }
 
 .card.flip .back {
-    display: none;
+  display: none;
 }
 
-.front, .back {
-    border: 50px solid #656b65;
-    padding: 10px;
-    border-radius: 10px;
+.back {
+  width: auto;
 }
 
 .front {
-    display: none;
-    transform: rotateY(180deg);
-}
-
-.red {
-    border: 50px solid red;
-    background-color: red;
-    color: red;
-}
-
-.magenta {
-    border: 50px solid magenta;
-    background-color: magenta;
-    color: magenta;
-}
-
-.maroon {
-    border: 50px solid maroon;
-    background-color: maroon;
-    color: maroon;
-}
-
-.olive {
-    border: 50px solid olive;
-    background-color: olive;
-    color: olive;
-}
-
-.green {
-    border: 50px solid green;
-    background-color: green;
-    color: green;
-}
-
-.purple {
-    border: 50px solid purple;
-    background-color: purple;
-    color: purple;
-}
-
-.teal {
-    border: 50px solid teal;
-    background-color: teal;
-    color: teal;
-}
-
-.navy {
-    border: 50px solid navy;
-    background-color: navy;
-    color: navy;
+  display: none;
+  transform: rotateY(180deg);
 }
